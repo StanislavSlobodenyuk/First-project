@@ -1,0 +1,171 @@
+.footer {
+    position: relative;
+    background-color: $main-color2;
+    padding: 40px 0px 50px;
+    &__top{
+        display: grid;
+        grid-template-columns: 200px 200px 300px auto;
+        color: $main-color1;
+    }
+    &__bottom{
+        display: flex;
+        align-items: center;
+        color: $main-color1;
+        margin: 100px 0px 0px 0px;
+    }
+    &__decor{
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        bottom: 112px;
+        background-color: rgba(255, 255, 255, 0.15);
+    }
+}
+.top-footer{
+    &__title {
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 25px;
+    }
+    &__list>:not(:last-child) {
+        margin-bottom: 10px;
+    }
+    &__sendmail {
+        display: flex;
+        flex-direction: column;
+    }
+    &__form {
+        position: relative;
+    }
+    &__input-email {
+        width: 100%;
+        height: 55px;
+        padding-left: 40px;
+        background: rgba(255, 255, 255, 0.05);
+        color: #fff;
+        border-radius: 100px;
+    }
+    &__input-email::placeholder{
+        color: #fff;
+    }
+    &__input-submit {
+        font-size: 16px;
+        font-weight: 600;
+        background-color: $main-color3;
+        border: 0;
+        padding: 18px 40px 17px;
+        border-radius: 100px;
+        position: absolute;
+        right: 0px;
+    }
+    &__number{
+        margin-top: 95px;
+    }
+}
+
+.bottom-footer {
+    &__text {
+        font-size: 16px;
+        font-weight: 600;
+        flex: 0 0 21%;
+    }
+    &__socials {
+        display: flex;
+        gap: 20px;
+        flex: 1 1 auto;
+
+    }
+    &__roots {
+        opacity: 0.5;
+    }
+}
+
+@media (min-width: 991.98px) {
+    .top-footer__number{
+        align-self: end;
+    }
+}
+@media (max-width: 991.98px) {
+    .top-footer{
+        grid-template-columns: repeat(3, 1fr);
+        &__sendmail{
+            margin-top: 60px;
+            grid-column-end: 4;
+            grid-column-start: 1;
+        }
+        &__number{
+            margin: 45px 0px 0px 35px;
+        }
+    }
+    .bottom-footer__text {
+        flex: 1 1 28%;
+        font-size: 14px;
+    }
+    .bottom-footer__socials {
+      margin: 0 0 0 10px;
+    }
+    .bottom-footer__roots{
+        max-width: 175px;
+        text-align: right;
+    }
+    
+}
+@media (max-width: 479.98px) {
+    .top-footer{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 40px;
+        &__sendmail{
+            margin-top: 20px;
+            grid-column-end: 1;
+            grid-column-start: 1;
+        }
+        &__input-email {
+            width: 100%;
+            height: 45px;
+            padding-left: 40px;
+            background: rgba(255, 255, 255, 0.05);
+            color: #fff;
+            border-radius: 100px;
+        }
+        &__input-email::placeholder{
+            color: #fff;
+        }
+        &__input-submit {
+            font-size: 16px;
+            font-weight: 600;
+            background-color: $main-color3;
+            border: 0;
+            padding: 12px 15px 12px;
+            border-radius: 100px;
+            position: absolute;
+            right: 0px;
+        }
+        &__number{
+            margin-top: 20px;
+        }
+    }
+    .bottom-footer{
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        &__text {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        &__socials {
+            margin: 0px 0px 40px 0px;
+        }
+        &__roots{
+            max-width: 100%;
+            text-align: left;
+        }
+    }
+    .footer__decor{
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        bottom: 220px;
+        background-color: rgba(255, 255, 255, 0.15);
+    }
+}

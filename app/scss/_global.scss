@@ -1,0 +1,64 @@
+body._lock{
+    overflow: hidden;
+}
+body{
+    font-family: "Montserrat";
+    font-size: 14px;
+    line-height: 150%;
+}
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    overflow: hidden;
+}
+a:active,
+a:hover,
+a {
+    color: $main-color1;
+}
+.main{
+    flex: 1 0 auto;
+}
+.footer{
+    flex: 0 0 auto;
+}
+
+// container +30px padding
+[class*="__container"]{
+    max-width: 1160px;
+    margin: 0 auto;
+}
+@media (max-width: 1189.98px ){
+    [class*="__container"] {
+        max-width: 970px;
+   }
+}
+@media (max-width: 991.98px){
+    [class*="__container"] {
+        max-width: 750px;
+   }
+}
+@media (max-width: 767.98px){
+    [class*="__container"] {
+        max-width: none;
+        padding: 0px 15px;
+   }
+}
+.inactive__languege{
+    opacity: 0.5;
+}
+.number {
+    color: #ffffff;
+    font-size: 20px;
+    position: relative;
+}
+.number::before{
+    content: " ";
+    background: url("../images/header-icon-phone.svg") 0 0 no-repeat;
+    position: absolute;
+    top: -3px;
+    left: -29px;
+    width: 24px;
+    height: 24px;
+}
