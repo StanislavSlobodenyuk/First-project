@@ -1,3 +1,6 @@
+
+"use strict"
+
 // == Бургер меню =========================================
 const iconMenu = document.querySelector(".header-burger__icon");
 const iconMenuClose = document.querySelector(".header-burger__icon-close");
@@ -8,7 +11,6 @@ if (iconMenu) {
         document.body.classList.toggle('_lock');
         iconMenu.classList.toggle('_active');
         headerMenu.classList.toggle('_active');
-        header.classList.toggle('_visible');
         iconMenuClose.classList.toggle('_active');
     });
 };
@@ -17,8 +19,132 @@ if (iconMenuClose) {
         document.body.classList.toggle('_lock');
         iconMenu.classList.toggle('_active');
         headerMenu.classList.toggle('_active');
-        header.classList.toggle('_visible');
         iconMenuClose.classList.toggle('_active');
     });
 }
 // == Бургер меню ==========================================
+
+// == Slider on main page ==========================================
+let promotionsSlider = new Swiper('.promotions-offers__slider',{
+     
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+   
+    // увімкнути/вимкнути захват та рух слайдів мишею на ПК
+    simulateTouch: true,
+    // чутливість
+    touchRatio: 1,
+    // кут роботи властивості
+    touchAngle: 45,
+    // курсор при переміщені
+    grabCursor: false,
+    // перемикання при кліку на слайд
+    slideToClickedSlide: false,
+  
+
+    // управління клавіатурою 
+    keyboard: {
+        // ввімкнути/вимкнути 
+        enabled: true,
+        // ввімкнути тільки тоді коли слайдер видно
+        onlyInViewport: true,
+        // ввімкнути керування за допомогою page up/down
+        pageUpDown: true,
+    },
+    // кількість слайдів для показу читатти там відключення функціоналу якщо слайдів менше чим порібно 
+    slidesPerView: 1,
+    watchOverflow: true,
+
+    // кількісь слайдів для листання
+    slidesPerGroup: 1,
+
+    // відступи між слайдами
+    spaceBetween: 50,
+
+    // нескінчений слайдер ТА якщо loop = true то loopedSlides == slidesPerView 
+    loop: true,
+    loopedSlides: 0,
+
+    autoplay: {
+        // затримка перед прокруткою
+        delay: 3000,
+        // зупинка на останьому слайді
+        stopOnLastSlide: false,
+        // відключити пілся ручної взаємодії
+        disableOnInteraction: false,
+    },
+
+    // швидкість перемикання слайдів
+    speed: 1000,
+
+});
+// == Slider on main page 
+
+
+// == Slider on our-revards page 
+let imageSlider = new Swiper('.our-rewards__slider',{
+    // Кнопки навігації (стрілки)
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+
+    // увімкнути/вимкнути захват та рух слайдів мишею на ПК
+    simulateTouch: true,
+    // чутливість
+    touchRatio: 1,
+    // кут роботи властивості
+    touchAngle: 45,
+    // курсор при переміщені
+    grabCursor: false,
+    // перемикання при кліку на слайд
+    slideToClickedSlide: true,
+  
+
+    // управління клавіатурою 
+    keyboard: {
+        // ввімкнути/вимкнути 
+        enabled: true,
+        // ввімкнути тільки тоді коли слайдер видно
+        onlyInViewport: true,
+        // ввімкнути керування за допомогою page up/down
+        pageUpDown: true,
+    },
+    
+    // кількість слайдів для показу читатти там відключення функціоналу якщо слайдів менше чим порібно 
+    slidesPerView: 3,
+    watchOverflow: true,
+
+    // кількісь слайдів для листання
+    slidesPerGroup: 120,
+
+    // відступи між слайдами
+    spaceBetween: 0,
+
+    // активний слайд по центру 
+    centeredSlides: false,
+
+    // початковий слайд
+    initialSlide: 0,
+
+    // нескінчений слайдер ТА якщо loop = true то loopedSlides == slidesPerView 
+    loop: false,
+    loopedSlides: 0,
+    // швидкість перемикання слайдів
+    speed: 1000,
+
+    breakpoints: {
+        320: {
+            slidesPerView: 1,
+        },
+        769: {
+            slidesPerView: 2,
+        },
+        992: {
+            slidesPerView: 3,
+        },
+    }
+});
+

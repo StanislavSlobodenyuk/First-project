@@ -42,8 +42,31 @@ a {
 @media (max-width: 767.98px){
     [class*="__container"] {
         max-width: none;
-        padding: 0px 15px;
+        padding: 0px 30px;
    }
+}
+._golden-button{
+    position: relative;
+    z-index: 1;
+    border-radius: 100px;
+    background-color: $main-color3;
+    color: $main-color2;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 133%;
+    letter-spacing: 0.1;
+}
+._golden-button::after{
+    content: "";
+    position: absolute;
+    background: url("../images/promotions-offers-buttonIcons.svg");
+    width: 24px;
+    height: 24px;
+    top: 19px;
+    right: 30px;
+}
+._golden-button:hover {
+    color: $main-color2;
 }
 .inactive__languege{
     opacity: 0.5;

@@ -3,8 +3,7 @@
     background-color: $main-color2;
     padding: 40px 0px 50px;
     &__top{
-        display: grid;
-        grid-template-columns: 200px 200px 300px auto;
+        display: flex;
         color: $main-color1;
     }
     &__bottom{
@@ -30,7 +29,17 @@
     &__list>:not(:last-child) {
         margin-bottom: 10px;
     }
+    &__logo{
+        flex: 16.80672269%;
+    }
+    &__navigation{
+        flex: 16.80672269%;
+    }
+    &__information{
+        flex: 25.21008403%;
+    }
     &__sendmail {
+        flex: 37.81512605%;
         display: flex;
         flex-direction: column;
     }
@@ -59,7 +68,7 @@
         right: 0px;
     }
     &__number{
-        margin-top: 95px;
+        margin: 55px 0px 0px 35px;
     }
 }
 
@@ -87,14 +96,12 @@
 }
 @media (max-width: 991.98px) {
     .top-footer{
+        display: grid;
         grid-template-columns: repeat(3, 1fr);
         &__sendmail{
             margin-top: 60px;
             grid-column-end: 4;
             grid-column-start: 1;
-        }
-        &__number{
-            margin: 45px 0px 0px 35px;
         }
     }
     .bottom-footer__text {
