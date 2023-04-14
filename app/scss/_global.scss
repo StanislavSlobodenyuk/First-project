@@ -85,3 +85,78 @@ a {
     width: 24px;
     height: 24px;
 }
+
+._title-h2{
+    color: $main-color2;
+    font-size: 26px;
+    line-height: 133%;
+    font-weight: 700;
+}
+
+
+// for slide 
+.swiper-button-prev1,
+.swiper-button-next1,
+.swiper-button-next2,
+.swiper-button-prev2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #f8f8f8;
+    background-image: url("../images/promotions-offers-buttonIcons.svg");
+    background-position: 13px 13px;
+    background-repeat: no-repeat;
+}
+.swiper-button-prev1,
+.swiper-button-prev2{
+    transform: rotate(180deg);
+    left: -65px;
+}
+.swiper-button-next1,
+.swiper-button-next2{
+    right: -70px;
+}
+.our-rewards .swiper-button-prev,
+.our-rewards .swiper-button-next,
+.recently-view .swiper-button-prev,
+.recently-view .swiper-button-next{
+    color: transparent;
+}
+.inner-for-slide{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1160px;
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin: 0px auto;   
+}
+.slider-1{
+    display: flex;
+    max-width: 1160px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.wrapper{
+    box-sizing: content-box;
+}
+.slider-1 .slide{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: auto;
+}
+.slider-1 .slide img{
+    max-width: 100%;
+    width: auto;
+    height: auto;
+}

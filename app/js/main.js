@@ -87,8 +87,8 @@ let promotionsSlider = new Swiper('.promotions-offers__slider',{
 let imageSlider = new Swiper('.our-rewards__slider',{
     // Кнопки навігації (стрілки)
     navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
+        nextEl: ".swiper-button-next1",
+        prevEl: ".swiper-button-prev1",
     },
 
     // увімкнути/вимкнути захват та рух слайдів мишею на ПК
@@ -112,29 +112,12 @@ let imageSlider = new Swiper('.our-rewards__slider',{
         // ввімкнути керування за допомогою page up/down
         pageUpDown: true,
     },
-    
-    // кількість слайдів для показу читатти там відключення функціоналу якщо слайдів менше чим порібно 
+
     slidesPerView: 3,
     watchOverflow: true,
-
-    // кількісь слайдів для листання
-    slidesPerGroup: 120,
-
-    // відступи між слайдами
-    spaceBetween: 0,
-
-    // активний слайд по центру 
-    centeredSlides: false,
-
-    // початковий слайд
-    initialSlide: 0,
-
-    // нескінчений слайдер ТА якщо loop = true то loopedSlides == slidesPerView 
-    loop: false,
-    loopedSlides: 0,
-    // швидкість перемикання слайдів
+    slidesPerGroup: 1,
     speed: 1000,
-
+    spaceBetween: 40,
     breakpoints: {
         320: {
             slidesPerView: 1,
@@ -148,3 +131,42 @@ let imageSlider = new Swiper('.our-rewards__slider',{
     }
 });
 
+
+let recentlySlider = new Swiper('.recently-view__slider',{
+    // Кнопки навігації (стрілки)
+    navigation: {
+        nextEl: ".swiper-button-next2",
+        prevEl: ".swiper-button-prev2",
+    },
+    simulateTouch: true,
+    touchRatio: 1,
+    touchAngle: 45,
+    grabCursor: false,
+    slideToClickedSlide: true, 
+
+    keyboard: {
+        enabled: true,
+        onlyInViewport: true,
+        pageUpDown: true,
+    },
+
+    slidesPerView: 4,
+    watchOverflow: true,
+    slidesPerGroup: 1,
+    speed: 1000,
+    spaceBetween: 40,
+    breakpoints: {
+        320: {
+            slidesPerView: 1,
+        },
+        695: {
+            slidesPerView: 2,
+        },
+        992: {
+            slidesPerView: 3,
+        },
+        1190: {
+            slidesPerView: 4,
+        },
+    }
+});
